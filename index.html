@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jeannette Yu</title>
+    <!-- <meta name="description" content=""> -->
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+	<body>
+    <div class="mt-5 mb-5 p-0 container bg-light" style="position: relative; background-attachment: fixed; background-image: url('lanterns.png'); background-size: 100%;">
+      <img src="name.png" style="width: 100%;">
+      <a href="https://www.linkedin.com/in/jeannette-yu-4193b1128/">
+        <img src="in-button.png" class="preload links" data-toggle="tooltip" title="LinkedIn" style="position:absolute; left:calc((100% - 140px)/2); top:57%;">
+      </a>
+      <a href="Jan 2019.pdf">
+        <img src="resume-button.png" class="preload links" data-toggle="tooltip" title="Resume" style="position:absolute; left:calc((100% + 40px)/2); top:57%;">
+      </a>
+    </div>
+
+    <!--IMAGE MODAL-->
+    <div id="photo-modal">
+      <button class="btn btn-dark" onclick="unzoom()">X</button>
+      <img class="img-fluid rounded" src="digital/golden-flowers-full.png">
+    </div>
+
+    <div class="p-5 container-fluid border-top bg-light">
+      <div class="row">
+
+        <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#game-overview" data-toggle="tab">Overview</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content">
+                <div class="tab-pane fade overview show active" id="game-overview" role="tabpanel" aria-labelledby="overview-tab">
+                  <img class="card-img-top" src="cat-wip.png" alt="Card image cap" style="object-fit: cover">
+                  <div class="card-body">
+                    <h5 class="card-title">Unity2D Android Game</h5>
+                    <p class="card-text">A variation on the classic Snake. Match only to adjacent colors, and eat your own tail to maneuver on this tight grid!
+                      Think fast, and think in color.</p>
+                      <p class="smaller">2018 - 2019</p>
+                    <!-- <a onclick="showCard(this)" class="show-btn btn btn-primary">Details</a> -->
+                  </div>
+                </div>
+                <!-- <div class="tab-pane fade details" id="run-details" role="tabpanel" aria-labelledby="details-tab">
+                    <div class="card-body">
+                      2
+                    </div>
+                  </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#alarm-overview" data-toggle="tab" role="tab" aria-controls="overview">Overview</a>
+                  </li>
+                  <li class="nav-item" id="alarm">
+                    <a class="nav-link" href="#alarm-details" data-toggle="tab" role="tab" aria-controls="details">Details</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#alarm-videos" data-toggle="tab"  role="tab" aria-controls="videos">Screenshots and Videos</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content">
+                <div class="tab-pane fade overview show active" id="alarm-overview" role="tabpanel" aria-labelledby="overview-tab">
+                  <img class="card-img-top" src="clock-4.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title"><i>Clock:in</i> Haxe Game</h5>
+                    <p>A short story-based puzzle game developed in Haxe by a team of 4 during our Games Capstone course. Learn a bit more about 
+                      how this course improved our skills in all areas of game-making (prototyping, evidence-based iteration, cross-platform publishing, art and sound).
+                      </p>
+                      <p>You'll see how it really isn't that easy to wake up for a corporate office job every day - at least not with these clocks.</p>                    </p>
+                      <p class="smaller">University of Washington<br>
+                      April 2018 - June 2018
+                    </p>
+                    <a onclick="showCard(this)" class="show-btn btn btn-primary">Details</a>
+                  </div>
+                </div>
+                <div class="tab-pane fade details" id="alarm-details" role="tabpanel" aria-labelledby="details-tab">
+                    <div class="card-body">
+                      <h5 class="card-title">Capstone Course Details</h5>
+                      <p>The 10-week course was divided into approximate sections:</p>
+                      <ul>
+                        <li>Week 1: Brainstorm ideas, form teams</li>
+                        <li>Week 2-3: Paper prototypes</li>
+                        <li>Week 4: User test and iterate</li>
+                        <li>Week 5-6: Code game</li>
+                        <li>Week 7-10: Test online, collect data, iterate, present (1x each week)</li>
+                      </ul>
+                      <p>During the online phase, we published or promoted our game on various platforms such as on Facebook, Reddit, Itch.io, Albino Black Sheep, Newgrounds and Kongregate. The focus was collecting
+                        data on user retention and level completion during each iteration (and using methods such as A/B testing) and making measurable improvements in these areas. 
+                      </p>
+                      <h5>Game Details</h5>
+                      <p>The game follows Emma, a corporate office worker returning from vacation. Each night, she has to set the alarm on a puzzling clock in order to get to work on time. Running out of time,
+                        or incorrectly setting the alarm negatively affects the story. Various puzzles keep things interesting for Emma (see the Images tab), but during the day, the game plays as a top-down simulator
+                        where the user decides what their office time should be spent doing.</p>
+                        <p>Some features we found important to include were power-ups such as additional time and hints to help struggling players. These were able to be discovered during the story-based office levels as well,
+                          rewarding people who explored the optional story. Relationship levels are also tracked and allow for further power-up opportunities. A large part of the polishing done during the final few weeks was focused
+                          on puzzle difficulty balancing with these in mind.
+                        </p>
+                        <p>The program itself was coded in Haxe using Visual Studio. While we only published the HTML5 version, the game also runs on Mac and Windows.</p>
+                      </p>
+                      <h5>My Contributions</h5>
+                      <p>Each team member was responsible for designing and coding 1/4 of the games puzzle levels. We assisted and debugged across the whole project, but we were mainly responsible for the correctness
+                        of our own levels. There were many other tasks however, including story, art, sound, publishing, data collection, class presentations, etc. One of my specific roles was
+                        acting as the main artist.</p>
+                        <div class="row">
+                          <div class="col-sm-4" style="text-align: center">
+                            <a onclick="zoom(this)">
+                              <img class="img-fluid rounded mt-2" src="clock-day-big.png">
+                            </a>
+                            <p class="smaller">Initial concept art for daytime transition</p>
+                          </div>
+                          <div class="col-sm-4" style="text-align:center">
+                            <a onclick="zoom(this)">
+                              <img class="img-fluid rounded mt-2" src="day1.png">
+                            </a>
+                            <p class="smaller">Office sideview</p>
+                          </div>
+                          <div class="col-sm-4" style="text-align:center">
+                            <a onclick="zoom(this)">
+                              <img class="img-fluid rounded mt-2" src="office-sketch.png">
+                            </a>
+                            <p class="smaller">Office sketch</p>
+                          </div>
+                        </div>
+                        <p>My specific contributions:</p>
+                        <ul>
+                          <li>Puzzle design (about 4 of 15 puzzles)</li>
+                          <li>Programming (a few puzzle levels, most office levels)</li>
+                          <li>Art, except title screen, and puzzles 5, 6, and 11.</li>
+                          <li>Sound</li>
+                        </ul>
+                    </div>
+                  </div>
+                <div class="tab-pane fade" id="alarm-videos" role="tabpanel" aria-labelledby="videos-tab">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-sm-6" style="text-align: center;">
+                          <img class="p-1 img-fluid rounded" src="clock-1.gif">
+                          <img class="p-1 img-fluid rounded" src="clock-chat.gif">
+                          <a onclick="zoom(this)">
+                            <img class="p-1 img-fluid rounded" src="clock-3.png">
+                          </a>
+                        </div>
+                        <div class="col-sm-6" style="text-align: center;">
+                          <a onclick="zoom(this)">
+                            <img class="p-1 img-fluid rounded" src="morning.png">
+                          </a>
+                          <img class="p-1 img-fluid rounded" src="clock-2.gif">
+                          <a onclick="zoom(this)">
+                            <img class="p-1 img-fluid rounded" src="clock-4.png">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="col-xl-4 col-md-6 mb-5">
+          <div class="card">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#snap-overview" data-toggle="tab" role="tab" aria-controls="overview">Overview</a>
+                </li>
+                <li class="nav-item" id="snap">
+                  <a class="nav-link" href="#snap-details" data-toggle="tab" role="tab" aria-controls="details">Details</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#snap-videos" data-toggle="tab"  role="tab" aria-controls="videos">Videos</a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content">
+              <div class="tab-pane fade overview show active" id="snap-overview" role="tabpanel" aria-labelledby="overview-tab">
+                <img class="card-img-top" src="https://i.amz.mshcdn.com/kMD5xVOHlafd4xYi4ReEAgGpoX0=/950x534/filters:quality(90)/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F748137%2Ff6656d5e-a01b-4b74-9bc1-02c41de33953.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Snapchat 3D Face Model and Avatar Driving</h5>
+                  <p>A complete rebuilding of the 3D facial model behind the Snapchat app, exploring how to express extreme emotions and realism.
+                     The 3D model is what allows the app to realistically mask and morph users' faces with filters and lens, as seen in the
+                      well-fitting and well-lit AR lens that were exclusively released for the iPhone X.</p>
+                    <p>Want to be a talking wolf? Or swap your friend's face in over yours? This project worked to make that a reality. <span class="smaller">Or at least a bit closer to reality.</span></p>
+                    <p class="smaller">Snap Research Internship<br>
+                    September 2017 - December 2017
+                  </p>
+                  <a onclick="showCard(this)" class="show-btn btn btn-primary">Details</a>
+                </div>
+              </div>
+              <div class="tab-pane fade details" id="snap-details" role="tabpanel" aria-labelledby="details-tab">
+                  <div class="card-body">
+                    <h5 class="card-title">Internship Details</h5>
+                    <p>Working within the Graphics research team in Venice, CA, the project was about 50-50 divided into 3D design and software
+                      programming. Tools I gained experience in during the internship included <b>Maya 2018, Adobe Photoshop, OpenGL, C++, </b>and <b>Qt Creator</b>.</p>
+                      <p>Project steps:</p>
+                      <ul>
+                        <li>Study facial expressions and previous model</li>
+                        <li>Create list and sketches of expressions</li>
+                        <li>Create 3D model and skeleton</li>
+                        <li>Connect model to code framework and demo programs</li>
+                        <li>Test and iterate on model and demos</li>
+                        <li>Present demo and research to team</li>
+                      </ul><br>
+                        <img class="img-fluid" src="https://i.amz.mshcdn.com/kYAU2nvVPFRKKDvb59T9zMEVdNM=/950x534/filters:quality(90)/https%3A%2F%2Fblueprint-api-production.s3.amazonaws.com%2Fuploads%2Fcard%2Fimage%2F748514%2F6b16b132-ca60-4ffd-a480-8f0e57ffed52.jpg">
+                      <span class="smaller" style="display: block"> screenshots: Raymond Wong/Mashable</span><br><br>
+                    <h5 class="card-title">See it in Snapchat</h5>
+                    <p>
+                      Open the Snapchat app and tap on the screen to see a selection of lens. One option allows for face swapping; either with a cute animal,
+                      or with your friends' pictures (possibly less cute).</p>
+                      <p>This is where an improved facial model most benefits, because the app is essentially
+                      drawing a mask over the actual user face in the camera. The new model aims to be flexible and realistic enought to match even the most
+                      extreme user expressions and positions. To see the true benefit of the new model however, you'll need to apply
+                      the iPhone X exclusive AR lens (pictured above):
+                    </p>
+
+                      <a href="https://itunes.apple.com/us/story/id1367291172?ign-itsct=TOD_SC02_PT069_US_SI1367291172&ign-itscg=as10001">App Store Preview</a><br>
+                      <a href="https://www.theverge.com/2018/4/6/17203856/snapchat-iphone-x-ar-lense-truedepth-camera">on The Verge</a><br>                    
+                      <a href="https://mashable.com/2018/04/06/snapchat-iphone-x-optimized-lenses/#qPuTjJ8KlgqY">on Mashable</a><br>
+                  </div>
+                </div>
+              <div class="tab-pane fade" id="snap-videos" role="tabpanel" aria-labelledby="videos-tab">
+                  <div class="card-body">
+                    <p class="smaller">GIFs courtesy of The Verge</p>
+                    <div class="row">
+                      <div class="col-sm-6"><img class="img-fluid" src="https://cdn.vox-cdn.com/thumbor/jGvPnL2i3BHfCsJOs7xBytphoqs=/800x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/10595211/snapchat-truedepth-mask-lens-1.0.gif"></div>
+                      <div class="col-sm-6"><img class="img-fluid" src="https://cdn.vox-cdn.com/thumbor/GfDWUMQ9AMq_1IxDEqsfMdGDw_c=/800x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/10595205/snapchat-truedepth-mask-lens-2.0.gif"></div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 mb-5">
+          <div class="card">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#worlds-overview" data-toggle="tab">Overview</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#worlds-details" data-toggle="tab">Details</a>
+                </li>
+                <li class="nav-item">
+                  <a id="w-vid" class="nav-link" href="#worlds-videos" data-toggle="tab">Progress Videos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#worlds-trailer" data-toggle="tab">Trailer</a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content">
+              <div class="tab-pane fade overview show active" id="worlds-overview" role="tabpanel" aria-labelledby="overview-tab">
+                <img class="card-img-top" src="worlds-thumbnail.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"><i>Worlds Apart</i> 3D-Animated Short Film</h5>
+                  <p >Developed over one short year by a class of 24 amateur animators, <i>Worlds Apart</i> is truly a product of student
+                  sweat and tears. I co-led the Effects team for this 7 minute film, and was also a member of the
+                  motion animation, rigging, lighting, and rendering/composite teams.</p>
+                  <p>It's a sweet story about imagination and heroics. But it's eye-opening to see what goes into making
+                    a film come to life.</p>
+                  <p class="smaller">University of Washington<br>
+                    September 2016 - June 2017
+                  </p>
+                  <a onclick="showCard(this)" class="show-btn btn btn-primary">Details</a>
+                </div>
+              </div>
+              <div class="tab-pane fade details" id="worlds-details" role="tabpanel" aria-labelledby="details-tab">
+                  <div class="card-body">
+                    <h5>Capstone Course Details</h5>
+                    <p>
+                      The course series is run each year by Barbara Mones in the Computer Science department, taking only a select number of students from an application process
+                      that includes a portfolio review. Nonetheless, the course also prioritizes students from multiple disciplines, and that lack formal experience in animation.
+                    </p>
+                    <p>General Timeline: </p>
+                    <ul>
+                      <li><b>June - August:</b> Optional Story class. Year's story is decided from student ideas.</li>
+                      <li><b>September - November:</b> Course teaches each step of the animation pipeline.</li>
+                      <li><b>December - January:</b> Preproduction (Animatic, set layouts, story refinement)</li>
+                      <li><b>by March</b>: Motionmatic complete, Fresh Eyes showing to get new feedback</li>
+                      <li><b>by June:</b> Completed film (lit, rendered, with sound and fx)</li>
+                      <li><b>Continuing year:</b> Touch-ups and polish by student volunteers, before presenting the film at festivals</li>
+                    </ul>
+                    <div class="row m-3">
+                      <div class="offset-lg-2 col-lg-8">
+                        <img class="img-fluid rounded" src="invitation_hi_res.png">
+                      </div>
+                    </div>
+                    <p>Technologies were mostly <i>Autodesk Maya 2017.5</i> and <i>Adobe Creative Suite</i>.</p>
+                    <p>After the introductory course in November, students are placed into variuos production teams that suit their skills and interests.
+                      The teams included:
+                    </p>
+                    <p>Concept Art, Layout, Modeling, <b>Rigging</b>, Texturing/Shading, <b>Motion</b>, Facial Expressions, <b>Lighting</b>, <b>Rendering/Composite</b>, Look and Feel,
+                      <b>Effects</b>, Scripting, Editing</p>
+                    </p>
+
+                    <p>
+                      <a href="javascript:openVideos()">Progress Videos</a> shows the film at various stages. More information
+                      about the course can be found at the <a href="https://arl.cs.washington.edu/about.html">UW Animation Research Lab website</a>
+                      and the <a href="https://arl.cs.washington.edu/animation_capstone/">Inside the Process page</a>. The film itself (and any scenes not yet public)
+                      cannot be shared online as it has not yet been screened at festivals.<br><br>
+                    </p>
+                    <h5>My Contributions</h5>
+                    <div class="row m-3">
+                      <div class="col-lg-7">
+                      In the above list, I was a member of the bolded production teams. Everyone worked on a variety of shots in different areas, and we all
+                      participated in the daily meetings where we would give feedback and present progress. I sketched out rough motion and polished fine motion for various shots. I also co-led the Effects team, which involved responsibilities such as
+                      arranging meetings, motivating team members (or removing them when they had more important film responsibilities than effects), and coordinating
+                      the effects demo reel which we presented to the director (our instructor) in March.<br><br>
+                      While we demo-ed many possible effects, only a couple made it into the film. One such is an emotional, tear-filled scene <span class="smaller">(right video)</span>.
+                      This tear effect was my responsiblity, and was accomplished using n-particles in Maya, following a motion path. This scene was also originally lit by me (for the June screening seen here, before being
+                      polished in the following summer).
+                      </div>
+
+                      <div class="col-lg-5 embed-responsive embed-responsive-16by9">
+                        <video class="embed-responsive-item" max-width="100%" width="640" height="360" muted controls name="media">Your browser does not support the video tag.<source src="./tears.mp4" type="video/mp4"></video>
+                      </div> 
+
+                    </div>
+                    <p><br>The film largely takes place in two settings: a daycare and a fantasy world. Before the June screening, I helped light many of the daycare scenes in the latter half of the film.
+                      In the most recent iterations that polished and refined the film after the course ended, I was responsible for lighting the sequence of fantasy shots
+                      that occur in the middle of the film (see examples below).
+                    </p>
+                    <p> Rendering/Composite went hand in hand with many of the lighting responsibilties. After lighting, I also composited and edited these same shots in Adobe After Effects.
+                    </p>
+                      <div class="row m-3">
+                        <div class="col-md-6">
+                          <img class="img-fluid rounded" src="photo1.png">
+                        </div>
+                        <div class="col-md-6">
+                          <img class="img-fluid rounded" src="photo3.png">
+                        </div>
+                      </div>
+                      <div>
+                          <img class="float-right m-3 rounded" width="50%" src="rigging.png">
+                        Some of my rigging responsibilities included rigging the joint-based skeleton in some of the fantasy animals that can be seen in this cage scene (and the final scene).<br><br>
+                        Overall, the entire film was a large team effort and collaboration and iteration were essential to our success.
+                        
+                      </div>
+                  </div>
+                </div>
+              <div class="tab-pane fade" id="worlds-videos" role="tabpanel" aria-labelledby="videos-tab">
+                  <div class="card-body" style="text-align: center;">
+                    <p>Story Reel (~September):</p>
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <video  class="embed-responsive-item" width="640" height="360" controls name="media">Your browser does not support the video tag.<source src="https://arl.cs.washington.edu/animation_capstone/videos/story/2017_story/2017_story.mp4" type="video/mp4"></video>
+                    </div>
+                    <br><br><p>Animatic (~December):</p>
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <video  class="embed-responsive-item" width="640" height="360" controls name="media"><source src="https://arl.cs.washington.edu/animation_capstone/videos/story/2017_animatic/2017_animatic.mp4" type="video/mp4"></video>
+                    </div>
+                    <br><br><p>Motionmatic + Fresh Eyes Review (~March):</p>
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <video  class="embed-responsive-item" width="640" height="360" controls name="media"><source src="https://arl.cs.washington.edu/animation_capstone/videos/fe/fe/graphics_cut_7.mp4" type="video/mp4"></video>
+                    </div>
+                  </div>
+              </div>
+              <div class="tab-pane fade" id="worlds-trailer" role="tabpanel" aria-labelledby="trailer-tab">
+                  <div class="card-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <video class="embed-responsive-item" width="640" height="360" controls name="media">Your browser does not support the video tag.<source src="https://arl.cs.washington.edu/films/2017_worlds/trailer.mp4" type="video/mp4"></video>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 mb-5">
+            <div class="card">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#spark-overview" data-toggle="tab">Overview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#spark-details" data-toggle="tab">Details</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content">
+                <div class="tab-pane fade overview show active" id="spark-overview" role="tabpanel" aria-labelledby="overview-tab">
+                  <img class="card-img-top" src="spark-thumbnail.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Adobe Spark Intelligent Website Design</h5>
+                    <p class="card-text">A project prototype that explored intelligent website creation tools. Users have more than just products or personal projects they want to share; they have stories. And it should be as easy as just uploading their content - then our tools should lay it out and automatically design the site for them, based on the needs and the type of media that's been provided.</p>
+                    <p>This is the idea I prototyped, beginning from the basics of the existing Spark Pages, but with the goal of 'more magic'.</p>
+                    <p class="smaller">
+                      Adobe Software Development Internship<br>
+                      June 2016 - September 2016
+                    </p>
+                    <a onclick="showCard(this)" class="show-btn btn btn-primary">Details</a>
+                  </div>
+                </div>
+                <div class="tab-pane fade details" id="spark-details" role="tabpanel" aria-labelledby="details-tab">
+                    <div class="card-body">
+                      <p>This internship balanced ideas of UX design and artifical intelligence, and gave me experience in working with different teams in different areas. My focus was to build a large-scale prototype to test and demo ideas for this early-stage project.</p>
+                      <div class="row m-2">
+                        <div class="col-md-8">
+                          <p>To understand of the goal of the project, consider deliberate creators. As a case, consider specifically, 'Melissa'. She has been
+                            baking pies and pastries for years.
+                          </p>
+                          She:
+                          <ul style="list-style-type:none">
+                            <li>+ wants to share her work with a wider audience by creating a website</li>
+                            <li>- is often busy handling her business</li>
+                            <li>- lacks previous design or coding experience</li>
+                          </ul>
+                          </div>
+                          <div class="col-md-4">
+                            <img class="img-fluid rounded" src="melissa.jpg">
+                          </div>
+                      </div>
+                      <p>
+                        <b>Melissa wants a website design that fits to the content that she wants to publish.</b>
+                      </p>
+                      <p>In a standard workflow, this is what happens:</p>
+                      <ol style="list-style-type: decimal">
+                        <li>Melissa provides background details about her needs</li>
+                        <li>She chooses a suggested template</li>
+                        <li>and <i>then</i>, she struggles to fit her content into a generic, inflexible template</li>
+                      </ol>
+                      <p>Our project addresses what Melissa needs. <b>An intelligent website system that can adjust to any variety of
+                        content to produce beautiful and responsive designs.
+                      </b></p>
+                      <div class="row m-3">
+                        <div class="offset-lg-2 col-lg-8">
+                          <img class="img-fluid rounded" src="poster.png">
+                        </div>
+                      </div>
+                      <p>
+                        Technologies used included <b>Javascript</b>, <b>Vue.js</b>, <b>CSS</b> and <b>HTML5</b>.
+                      </p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 mb-5">
+              <div class="card">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#run-overview" data-toggle="tab">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#run-details" data-toggle="tab">Details</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#run-images" data-toggle="tab">Images</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#run-video" data-toggle="tab">Video</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content">
+                  <div class="tab-pane fade overview show active" id="run-overview" role="tabpanel" aria-labelledby="overview-tab">
+                    <img class="card-img-top" src="run-thumbnail.png" alt="Card image cap" style="object-fit: cover">
+                    <div class="card-body">
+                      <h5 class="card-title"><i>Run</i> Short Film using Primitive Graphics</h5>
+                      <p class="card-text">The final project in our Introductory Graphics Course. In 2 weeks, my partner and I scripted, animated, edited and did
+                        everything in between to create this 1 minute short film. It was entirely created in C++ and OpenGL, using the programs and concepts that we extended in our
+                        previous assignments. But don't expect any high-poly models or fancy facial animation - we did it all in primitives and spline curves.
+                      </p> <p>Inspired by Masuda Toshio's eerie music; come follow this short chase.</p>
+                      <p class="smaller">University of Washington<br>
+                      March 2016 - June 2016</p>
+                      <a onclick="showCard(this)" class="show-btn btn btn-primary">Details</a>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade details" id="run-details" role="tabpanel" aria-labelledby="details-tab">
+                      <div class="card-body">
+                        <h5>Project Details</h5>
+                        <p>The course website: <a href="https://courses.cs.washington.edu/courses/cse457/16sp/">https://courses.cs.washington.edu/courses/cse457/16sp/</a></p>
+                        <p>I took this intro course in Spring 2016, and found it to be my favorite course in the entire department, motivating me to then pursue Computer Animation the following year.
+                          I also became the Teacher Assistant for this course in Spring 2017, when we decided to overhaul the project codebase, updating all assignments to OpenGL 4.1 and to be
+                          cross-compatible.
+                        </p>
+                        <p>The course covers a wide variety of topics as can be found on the course syllabus, but it contains 4 main projects:</p>
+                        <ol>
+                          <li><b>Impressionist</b> - image manipulation, OpenGL primitives, user-interface design, and image processing</li>
+                          <li><b>Modeler</b> - 3d surfaces, surface normals, texturemapping, hierarchical modeling, and shading</li>
+                          <li><b>Trace</b> - a ray tracer (geometry intersections, shadow attenuation, reflection/refraction)</li>
+                          <li><b>Animator</b> -  extends a spline-based animation system to support multiple curve types, and implements a particle system simulation engine</li>
+                        </ol>
+                        <p>Each project is completed in a team of 2, and after completing the coding portion, we also use our program to create an artifact. For the 4th project, we actually utilize the
+                          model created in project 2. <i>Run</i>, this short animation, was produced in two weeks
+                        after completing Project 4: Animator. Among the class, it was voted 1st place. See the ranking and all the films 
+                        <a href="https://courses.cs.washington.edu/courses/cse457/16sp/projects/animator/artifacts/">here</a>.</i></p>
+                        <p>Technologies used: <b>C++</b>, <b>OpenGL</b>, <b>FLTK UI toolkit</b>, <b>Adobe Photoshop</b> and <b>Adobe Premiere</b>.</p>
+                        <h5>My Contributions</h5>
+                        <p>Jennifer Kang and I worked together on producing <i>Run</i>. We spent about 1 week on the coding portion of the project so that we could take 2 weeks to develop
+                          our film (a struggle without modern 3D design or animation tools). We worked together in the school labs for large portions of the project coding, and basic planning for the film.
+                          We also both collaborated on the script, character animation, and editing.
+                        Some specific responsibilities were:</p>
+                        <ul>
+                          <li> Both:
+                            <ul>
+                              <li>Spline / Other curves code</li>
+                              <li>Film script</li>
+                              <li>Character animation</li>
+                              <li>Editing</li>
+                            </ul>
+                          </li>
+                          <li> Jenny:
+                            <ul>
+                              <li>Model shading (from Project 2)</li>
+                              <li>Particle system code</li>
+                            </ul>
+                          </li>
+                          <li> Me:
+                            <ul>
+                              <li>Model geometry and textures (from Project 2)</li>
+                              <li>Concept, Look and Feel</li>
+                              <li>Environment (textures, billboard quads, grass particles)</li>
+                              <li>Lighting</li>
+                              <li>Camera</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <p>Our inspiration for the film actually came from the song that we use: Kehai composed by Masuda Toshio. Its eerie and alarming melody
+                        drove the story. Take a look at the Video tab to see the full film. </p>
+                      </div>
+                    </div>
+                  <div class="tab-pane fade" id="run-images" role="tabpanel" aria-labelledby="images-tab">
+                      <div class="card-body">
+                        <p>These images show the main character from our film as developed during Project 2: Modeler. He's composed of
+                          primitive shapes and from revolving simple curves.
+                        </p>
+                        <div class="row m-3">
+                          <div class="col-lg-4 p-2">
+                            <a onclick="zoom(this)">
+                              <img class="img-fluid rounded" src="run-0.png">
+                            </a>
+                          </div>
+                          <div class="col-lg-4 p-2">
+                            <a onclick="zoom(this)">
+                              <img class="img-fluid rounded" src="run-1.png">
+                            </a>
+                          </div>
+                          <div class="col-lg-4 p-2">
+                            <a onclick="zoom(this)">
+                              <img class="img-fluid rounded" src="run-2.png">
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="tab-pane fade" id="run-video" role="tabpanel" aria-labelledby="video-tab">
+                      <div class="card-body">
+                        <div class="embed-responsive embed-responsive-16by9">
+                          <video class="embed-responsive-item" width="640" height="360" controls name="media">Your browser does not support the video tag.<source src="run_with_audio.mp4" type="video/mp4"></video>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-md-6 mb-5">
+                <div class="card">
+                  <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#fruit-overview" data-toggle="tab">Overview</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#fruit-details" data-toggle="tab">Details</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#fruit-images" data-toggle="tab">Images</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#fruit-video" data-toggle="tab">Gameplay Video</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-content">
+                    <div class="tab-pane fade overview show active" id="fruit-overview" role="tabpanel" aria-labelledby="overview-tab">
+                      <img class="card-img-top" src="FFC_screenshot.jpeg" alt="Card image cap" style="object-fit: cover">
+                      <div class="card-body">
+                        <h5 class="card-title"><i>Fast Fruit Chain</i> (XNA Game Studio)</h5>
+                        <p class="card-text">My first game, and my first experience programming anything.</p>
+                        <p>Version 1 of the game was developed at DigiPen Institute of Technology's ProjectFUN workshop, using their C++ game engine.
+                          It was my introduction to any concept of coding, and it inspired me to win the Best Game Award at the end of the 2-week program.
+                          Honestly, DigiPen's engine meant I didn't have to do much coding at all, so the year after, I redeveloped the entire game on my own using
+                          Microsoft's XNA Game Studio.
+                        </p>
+                        <p>It's simple, addicting, and embarassingly '16-year-old-programmer', but it's my first game.</p>
+                        <p class="smaller">June 2011 - April 2013</p>
+                        <a onclick="showCard(this)" class="show-btn btn btn-primary">Details</a>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade details" id="fruit-details" role="tabpanel" aria-labelledby="details-tab">
+                        <div class="card-body">
+                          <h5>Game Details</h5>
+                          <p>
+                            The rules are simple. Drop the colored blobs onto their corresponding tree and watch fruit grow! Don't miss, and send as much
+                            fruit packing as you can before the time runs out.
+                          </p>
+                          <p>I was inspired by the simple flash games from Neopets.com, and got a lot of enjoyment out of decorating the game with
+                            textures and sounds. Arguably, that design and the quick, addictive gameplay are what won me the Best Game Award out of the class
+                            at the end of the 2-week DigiPen ProjectFUN Workshop. See these links for some details:<br>
+                            <a href="https://projectfun.digipen.edu/summer-programs/teen-workshops/">Digipen ProjectFUN Website</a><br>
+                            <a href="https://www.geekwire.com/2011/meet-15yearold-game-developer-wowed-crowd-projectfun/">GeekWire: 'Meet the 15-year-old whose game wowed the crowd at DigiPen’s summer camp'</a>
+                          </p>
+                          <p>
+                            Version 2 was developed during my programming course at Kentridge High School. I used Microsoft's XNA Game Studio 3.0 (C#), and Visual Studio 2008. It was developed to essentially be identical, except I also created
+                            an additional versus mode and included Xbox controller support.
+                          </p>
+                          <h5>Further Credits:</h5>
+                          <img class="rounded img-fluid" src="FFC_credits.jpg">
+                        </div>
+                      </div>
+                    <div class="tab-pane fade" id="fruit-images" role="tabpanel" aria-labelledby="images-tab">
+                        <div class="card-body">
+                          <!-- <p>These images show the main character from our film as developed during Project 2: Modeler. He's composed of
+                            primitive shapes and from revolving simple curves.
+                          </p> -->
+                          <div class="row m-3">
+                            <div class="col-xs-1" style="text-align: center">
+                              <a onclick="zoom(this)">
+                                <img class="m-1 img-fluid rounded" src="FFC.jpg">
+                              </a>
+                              <a onclick="zoom(this)">
+                                <img class="m-1 img-fluid rounded" src="FFC_rules.jpg">
+                              </a>
+                              <a onclick="zoom(this)">
+                                <img class="m-1 img-fluid rounded" src="FFC_screenshot.jpeg">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="fruit-video" role="tabpanel" aria-labelledby="video-tab">
+                        <div class="card-body">
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <video class="embed-responsive-item" width="640" height="360" controls name="media">Your browser does not support the video tag.<source src="FFC_video.mp4" type="video/mp4"></video>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-4 col-md-6 mb-5">
+                  <div class="card">
+                    <div class="card-header">
+                      <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#art-overview" data-toggle="tab">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#art-digital" data-toggle="tab">Digital</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#art-traditional" data-toggle="tab">Traditional</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-content">
+                      <div class="tab-pane fade overview show active" id="art-overview" role="tabpanel" aria-labelledby="overview-tab">
+                        <img class="card-img-top" src="digital/stardew-full.png" alt="Card image cap" style="object-fit: cover">
+                        <div class="card-body">
+                          <h5 class="card-title">Miscellaneous Artwork</h5>
+                          <p class="card-text">Various select traditional and digital illustrations I have made over the years. My main medium today is digital, via
+                            Adobe Photoshop.
+                          </p>
+                          <p><span class="smaller">2010 - 2018</span></p>
+                          <a onclick="showCard(this)" class="show-btn btn btn-primary">Gallery</a>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade details" id="art-digital" role="tabpanel" aria-labelledby="digital-tab">
+                          <div class="card-body">
+                            
+                              <div class="row m-3">
+                                  <div class="col-md-4">
+                                    <a onclick="zoom(this)">
+                                      <img class="m-1 img-fluid rounded dimmed" src="digital/stardew-full.png">
+                                    </a>
+                                    <a onclick="zoom(this)">
+                                      <img class="m-1 img-fluid rounded dimmed" src="digital/friends3-full.png">
+                                    </a>
+                                    <a onclick="zoom(this)">
+                                      <img class="m-1 img-fluid rounded dimmed" src="digital/friends1-full.png">
+                                    </a>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <a onclick="zoom(this)">
+                                      <img class="m-1 img-fluid rounded dimmed" src="digital/bird-beak-full.png">
+                                    </a>
+                                    <a onclick="zoom(this)">
+                                      <img class="m-1 img-fluid rounded dimmed" src="digital/friends2-full.png">
+                                    </a>
+                                    <a onclick="zoom(this)">
+                                      <img class="m-1 img-fluid rounded dimmed" src="digital/mulan.png">
+                                    </a>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <a onclick="zoom(this)">
+                                      <img class="m-1 img-fluid rounded dimmed" src="digital/golden-flowers-full.png">
+                                    </a>
+                                    <a onclick="zoom(this)">
+                                      <img class="m-1 img-fluid rounded dimmed" src="digital/friends4-full.png">
+                                    </a>
+                                    <a onclick="zoom(this)">
+                                      <img class="m-1 img-fluid rounded dimmed" src="digital/for-dog-full.png">
+                                    </a>
+                                  </div>
+                                </div>
+                          </div>
+                        </div>
+                      <div class="tab-pane fade" id="art-traditional" role="tabpanel" aria-labelledby="traditional-tab">
+                          <div class="card-body">
+                            <div class="row m-3">
+                              <div class="col-md-4">
+                                <a onclick="zoom(this)">
+                                  <img class="m-1 img-fluid rounded dimmed" src="traditional/taiwan-full.png">
+                                </a>
+                                <a onclick="zoom(this)">
+                                  <img class="m-1 img-fluid rounded dimmed" src="traditional/dog-full.png">
+                                </a>
+                              </div>
+                              <div class="col-md-4">
+                                <a onclick="zoom(this)">
+                                  <img class="m-1 img-fluid rounded dimmed" src="traditional/pocket-watch-full.png">
+                                </a>
+                                <a onclick="zoom(this)">
+                                  <img class="m-1 img-fluid rounded dimmed" src="traditional/archery-full.png">
+                                </a>
+                                <a onclick="zoom(this)">
+                                  <img class="m-1 img-fluid rounded dimmed" src="traditional/self-full.png">
+                                </a>
+                              </div>
+                              <div class="col-md-4">
+                                <a onclick="zoom(this)">
+                                  <img class="m-1 img-fluid rounded dimmed" src="traditional/pelican-full.png">
+                                </a>
+                                <a onclick="zoom(this)">
+                                  <img class="m-1 img-fluid rounded dimmed" src="traditional/sais-full.png">
+                                </a>
+                                <a onclick="zoom(this)">
+                                  <img class="m-1 img-fluid rounded dimmed" src="traditional/grass-full.png">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+              
+                    </div>
+                  </div>
+                </div>
+
+
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

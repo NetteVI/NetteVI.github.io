@@ -1,0 +1,60 @@
+.card-img-top {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.mb-5 {
+    transition: max-width 0.5s, max-height 0.5s;
+}
+
+.show-btn {
+    color:white !important;
+}
+
+.preload {
+    top: 50% !important;
+}
+.links {
+    transition: top 2s;
+}
+
+.smaller {
+    font-size: 14px;
+}
+
+#photo-modal {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+    text-align: center;
+}
+#photo-modal img {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    max-height: 100%;
+}
+#photo-modal button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 200;
+}
+
+.dimmed {
+    opacity: 0.8;
+    transition: opacity 0.5s;
+    /* border-radius: 50px !important; */
+}
+.dimmed:hover {
+    opacity: 1.0;
+}
+a {
+    cursor: pointer;
+}
